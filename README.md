@@ -1,7 +1,7 @@
-dotfiles
+Dotfiles
 ========
 
-Dotfiles for OSX/Linux.
+
 
 ### Dotfiles
 To use .bash_profile on Linux, remember to add 
@@ -12,7 +12,7 @@ To use .bash_profile on Linux, remember to add
 to .bashrc. 
 
 ### .OSX
-.osx is used on a new Mac-installation, and makes OSX more usable.
+.osx is used on a new Mac-installation, and makes OSX usable for me.
 Just run:
 
     ./.osx
