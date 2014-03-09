@@ -1,0 +1,14 @@
+#! /bin/bash
+
+# Installs macports listed in textfile.
+
+filename="installedPorts.txt"
+
+sudo port selfupdate
+sudo port upgrade outdated
+
+while read -r line
+do
+    sudo port install $line
+    echo $line 
+done < "$filename"
