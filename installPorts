@@ -9,6 +9,6 @@ sudo port upgrade outdated
 
 while read -r line
 do
-    sudo port install $line
+    sudo port install $line > /dev/null 2>&1
     echo $line 
 done < "$filename"
