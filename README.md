@@ -9,7 +9,8 @@ To use .bash_profile on Linux, remember to add
     fi
 to .bashrc. 
 
-.osx contains sensable setups for new Macs. Run
+.osx is used on a new Mac-installation, and makes OSX more usable.
+Just run:
 
     ./.osx
 
