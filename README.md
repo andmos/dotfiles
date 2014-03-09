@@ -4,6 +4,7 @@ Dotfiles
 
 
 ### Dotfiles
+I use .bash_profile on both Linux and OSX, a uname-check fixes the platformspesific values.
 To use .bash_profile on Linux, remember to add 
 
     if [ -f ~/.bash_profile ]; then
