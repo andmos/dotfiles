@@ -53,5 +53,9 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Automatically hide and show the Dock
 defaults write com.apple.dock autohide -bool true
 
+# Enable UNIX - like bootscreen:
+nvram boot-args="-v" 
+
+
 killall Finder
 echo "Setup completed. You should reboot now."
