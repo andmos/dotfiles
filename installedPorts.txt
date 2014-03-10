@@ -1,213 +1,266 @@
-The following ports are currently installed:
-  apple-gcc42 
-  apr 
-  apr-util 
-  at-spi2-atk 
-  at-spi2-core 
-  atk 
-  autoconf 
-  automake 
-  bzip2 
-  cairo 
-  cctools 
-  cctools-headers 
-  cmake 
-  cmake 
-  coreutils 
-  curl 
-  curl-ca-bundle 
-  cyrus-sasl2 
-  db46 
-  db_select 
-  dbus 
-  dbus-glib 
-  dbus-python27 
-  desktop-file-utils 
-  docbook-xml 
-  docbook-xml-4.1.2 
-  docbook-xml-4.2 
-  docbook-xml-4.3 
-  docbook-xml-4.4 
-  docbook-xml-4.5 
-  docbook-xml-5.0 
-  docbook-xsl 
-  dyld-headers 
-  expat 
-  fail2ban 
-  file 
-  file 
-  fontconfig 
-  fop 
-  freetype 
-  freetype 
-  gawk 
-  gcc_select 
-  gconf 
-  gdbm 
-  gdk-pixbuf2 
-  gdk-pixbuf2 
-  gdk-pixbuf2 
-  getopt 
-  gettext 
-  glib2 
-  gmp 
-  gnome-common 
-  gnome-doc-utils 
-  gnutls 
-  gnutls 
-  go 
-  go 
-  gobject-introspection 
-  gperf 
-  graphite2 
-  gtk-doc 
-  gtk-doc 
-  gtk-doc 
-  gtk3 
-  harfbuzz 
-  help2man 
-  hicolor-icon-theme 
-  htop 
-  iftop 
-  intltool 
-  iso-codes 
-  itstool 
-  itstool 
-  jasper 
-  jpeg 
-  jpeg 
-  jq 
-  kerberos5 
-  lcms 
-  ld64 
-  libcomerr 
-  libedit 
-  libevent 
-  libffi 
-  libgcrypt 
-  libgpg-error 
-  libiconv 
-  libidl 
-  libidn 
-  libmagic 
-  libmagic 
-  libmng 
-  libnet11 
-  libpcap 
-  libpixman 
-  libpng 
-  libpng 
-  libpng 
-  libproxy 
-  libsdl 
-  libtasn1 
-  libtool 
-  libunwind-headers 
-  LibVNCServer 
-  libxml2 
-  libxslt 
-  libyubikey 
-  llvm-3.3 
-  llvm_select 
-  lzo2 
-  m4 
-  makepasswd 
-  mosh 
-  ncurses 
-  ncursesw 
-  neon 
-  nettle 
-  nmap 
-  openjade 
-  opensp 
-  openssl 
-  orbit2 
-  p5.12-crypt-passwdmd5 
-  p5.12-getopt-long 
-  p5.12-io-tty 
-  p5.12-locale-gettext 
-  p5.12-pathtools 
-  p5.12-scalar-list-utils 
-  p5.12-xml-parser 
-  p5.16-getopt-long 
-  p5.16-locale-gettext 
-  p7zip 
-  p11-kit 
-  pango 
-  pcre 
-  perl5 
-  perl5.12 
-  perl5.16 
-  pkgconfig 
-  policykit 
-  popt 
-  protobuf-cpp 
-  py27-cairo 
-  py27-gobject 
-  py27-libxml2 
-  py27-libxml2 
-  python27 
-  python_select 
-  rarian 
-  readline 
-  rexx 
-  scons 
-  serf1 
-  serf1 
-  shared-mime-info 
-  sl 
-  sqlite3 
-  sqlite3 
-  subversion 
-  subversion 
-  tcptraceroute 
-  tiff 
-  tmux 
-  tree 
-  unrar 
-  vde2 
-  wget 
-  Xft2 
-  xmlcatmgr 
-  xorg-bigreqsproto 
-  xorg-compositeproto 
-  xorg-damageproto 
-  xorg-evieproto 
-  xorg-fixesproto 
-  xorg-inputproto 
-  xorg-kbproto 
-  xorg-libice 
-  xorg-libpthread-stubs 
-  xorg-libsm 
-  xorg-libX11 
-  xorg-libXau 
-  xorg-libxcb 
-  xorg-libXcomposite 
-  xorg-libXcursor 
-  xorg-libXdamage 
-  xorg-libXdmcp 
-  xorg-libXevie 
-  xorg-libXext 
-  xorg-libXfixes 
-  xorg-libXi 
-  xorg-libXinerama 
-  xorg-libXrandr 
-  xorg-libXtst 
-  xorg-randrproto 
-  xorg-recordproto 
-  xorg-renderproto 
-  xorg-util-macros 
-  xorg-xcb-proto 
-  xorg-xcb-util 
-  xorg-xcmiscproto 
-  xorg-xextproto 
-  xorg-xf86bigfontproto 
-  xorg-xineramaproto 
-  xorg-xproto 
-  xorg-xtrans 
-  xrender 
-  xz 
-  ykpers 
-  yubico-c-client 
-  yubico-pam 
-  zlib 
+adns
+aircrack-ng
+apache-ant
+apg
+apple-gcc42
+apr
+apr-util
+aquaterm
+at-spi2-atk
+at-spi2-core
+atk
+autoconf
+automake
+bash
+bash-completion
+bzip2
+c-ares
+cairo
+cctools
+cctools-headers
+chkrootkit
+cloog
+cmake
+coreutils
+curl
+curl-ca-bundle
+cyrus-sasl2
+db46
+db_select
+dbus
+dbus-glib
+dbus-python27
+desktop-file-utils
+docbook-xml
+docbook-xml-4.1.2
+docbook-xml-4.2
+docbook-xml-4.3
+docbook-xml-4.4
+docbook-xml-4.5
+docbook-xml-5.0
+docbook-xsl
+dyld-headers
+emacs
+expat
+fail2ban
+file
+fontconfig
+fop
+freetype
+gawk
+gcc48
+gcc_select
+gconf
+gd2
+gdbm
+gdk-pixbuf2
+getopt
+gettext
+ghostscript
+glances
+glib2
+gmake
+gmp
+gnome-common
+gnome-doc-utils
+gnuplot
+gnutls
+go
+gobject-introspection
+gperf
+graphite2
+grep
+groff
+gsl
+gtk-doc
+gtk2
+gtk3
+gzip
+harfbuzz
+help2man
+hicolor-icon-theme
+htop
+hydra
+icu
+iftop
+intltool
+irssi
+isl
+iso-codes
+itstool
+jasper
+jbig2dec
+jbigkit
+jpeg
+jq
+kerberos5
+lcms
+ld64
+less
+libcomerr
+libedit
+libevent
+libffi
+libgcc
+libgcrypt
+libgeoip
+libgpg-error
+libiconv
+libidl
+libidn
+libmagic
+libmng
+libmpc
+libnet11
+libpaper
+libpcap
+libpixman
+libpng
+libproxy
+libsdl
+libsmi
+libssh
+libssh01
+libtasn1
+libtool
+libunistring
+libunwind-headers
+LibVNCServer
+libvpx
+libxml2
+libxslt
+libyubikey
+llvm-3.3
+llvm-gcc42
+llvm_select
+lua
+lzo2
+m4
+man
+mosh
+mpfr
+mtr
+mysql_select
+ncurses
+neon
+netpbm
+nettle
+nmap
+nodejs
+ntop
+openjade
+opensp
+openssl
+ophcrack
+orbit2
+p5.12-getopt-long
+p5.12-io-tty
+p5.12-locale-gettext
+p5.12-pathtools
+p5.12-scalar-list-utils
+p5.12-xml-parser
+p5.16-getopt-long
+p5.16-locale-gettext
+p7zip
+p11-kit
+pango
+pcre
+pdflib
+perl5
+perl5.12
+perl5.16
+pip_select
+pkgconfig
+play
+policykit
+popt
+portaudio
+protobuf-cpp
+psutils
+py26-mysql
+py26-setuptools
+py27-cairo
+py27-gobject
+py27-libxml2
+py27-pip
+py27-psutil
+py27-setuptools
+python26
+python27
+python_select
+ranger
+rarian
+readline
+rrdtool
+scala2.8
+scala_select
+scons
+serf1
+shared-mime-info
+sl
+smartmontools
+sqlite3
+sshguard
+subversion
+tcl
+tcp_wrappers
+tcptraceroute
+texinfo
+tiff
+tmux
+tor
+unrar
+vde2
+watch
+wget
+whois
+wxWidgets-3.0
+wxWidgets_select
+Xft2
+xmlcatmgr
+xorg-bigreqsproto
+xorg-compositeproto
+xorg-damageproto
+xorg-evieproto
+xorg-fixesproto
+xorg-inputproto
+xorg-kbproto
+xorg-libice
+xorg-libpthread-stubs
+xorg-libsm
+xorg-libX11
+xorg-libXau
+xorg-libxcb
+xorg-libXcomposite
+xorg-libXcursor
+xorg-libXdamage
+xorg-libXdmcp
+xorg-libXevie
+xorg-libXext
+xorg-libXfixes
+xorg-libXi
+xorg-libXinerama
+xorg-libXrandr
+xorg-libXt
+xorg-libXtst
+xorg-randrproto
+xorg-recordproto
+xorg-renderproto
+xorg-util-macros
+xorg-xcb-proto
+xorg-xcb-util
+xorg-xcmiscproto
+xorg-xextproto
+xorg-xf86bigfontproto
+xorg-xineramaproto
+xorg-xproto
+xorg-xtrans
+xpm
+xrender
+xz
+yasm
+ykpers
+yubico-c-client
+yubico-pam
+zlib
+zsh
