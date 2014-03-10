@@ -27,3 +27,4 @@ To get you're own list of installed ports use the following command:
 
     sudo port installed | sed -e 's/([^()]*)//g' | sed s/@[^@]*$// > InstalledPorts.txt
 
+If you find yourself doing this more than once, do as I do: script the sucker.
