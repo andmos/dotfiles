@@ -2,7 +2,7 @@
 
 # Some parameters to make OSX work like I want to.
 # Run when setting up new Macintosh.
-# Andreas Mosti 09.04.14
+# Andreas Mosti 09.03.14
 
 sudo -v
 
