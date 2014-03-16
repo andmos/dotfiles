@@ -12,7 +12,7 @@ To use .bash_profile on Linux, remember to add
     fi
 to .bashrc.
 My bin-equivalent is found [Here](http://github.com/andmos/Scrips) and is placed in my Dropbox for easy sharing, just added to
-$path.
+$PATH.
 
 ### .OSX
 .osx is used on a new Mac-installation, and makes OSX usable for me.
