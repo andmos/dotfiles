@@ -10,7 +10,9 @@ To use .bash_profile on Linux, remember to add
     if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile
     fi
-to .bashrc. 
+to .bashrc.
+My bin-equivalent is found [Here](http://github.com/andmos/Scrips) and is placed in my Dropbox for easy sharing, just added to my
+Path. 
 
 ### .OSX
 .osx is used on a new Mac-installation, and makes OSX usable for me.
