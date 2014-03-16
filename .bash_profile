@@ -12,21 +12,13 @@ then
 
 alias t='"/Users/$username/Dropbox/Scripts/todo.sh"'
 alias latex='perl ~/.latexmk'
-alias sshskript='"/Users/$username/Dropbox/Scripts/sshskript.bash"'
-alias syncprofil='"/Users/$username/Dropbox/Scripts/Syncprofil.bash"'
 alias flushdns='dscacheutil -flushcache'
-alias nmapskript='"/Users/$username/Dropbox/Scripts/nmapskript.bash"'
-alias backupprofile='"/Users/$username/Dropbox/Scripts/backubashprofile.bash"'
-alias eksternip='"/Users/$username/Dropbox/Scripts/eksternip.bash"'
-alias sshtunell='"/Users/$username/Dropbox/Scripts/sshtunell.bash"'
 alias tor-ssh='ssh -o ProxyCommand="nc -X 4 -x localhost:9050 %h %p"'
-alias killdashboard='defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock'
-alias aktiverdashboard='defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Dock'
-alias killspotlight='sudo mdutil -i on'
-alias aktiverspotlight='sudo sudo mdutil -i off' 
+alias killDashboard='defaults write com.apple.dashboard mcx-disabled -boolean YES; killall Dock'
+alias activateDashboard='defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Dock'
+alias killSpotlight='sudo mdutil -i on'
+alias activateSpotlight='sudo sudo mdutil -i off' 
 alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short' 
-alias rsyncbackup='"/Users/$username/Dropbox/Scripts/backupjob.bash"'
-alias spotify='"/Users/$username/Dropbox/Scripts/spotify.bash"'
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias stfu="osascript -e 'set volume output muted true'" 
 
@@ -88,20 +80,7 @@ then
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-alias backupprofile='"/home/$username/Dropbox/Scripts/backubashprofile.bash"'
-alias nmapskript='"/home/$username/Dropbox/Scripts/nmapskript.bash"'
-alias sshskript='"/home/$username/Dropbox/Scripts/sshskript.bash"'
-alias syncprofil='"/home/$username/Dropbox/Scripts/Syncprofil.bash"'
-alias disktester='"/home/$username/Dropbox/Scripts/Disktester.bash"'
-alias eksternip='"/home/$username/Dropbox/Scripts/eksternip.bash"'
-alias linuxinstall='"/home/$username/Dropbox/Scripts/linuxinstall.bash"'
-alias lampinstall='"/home/$username/Dropbox/Scripts/lampinstall.bash"'
-alias sshtunell='"/home/$username/Dropbox/Scripts/sshtunell.bash"'
-alias passmaker='"/home/$username/Dropbox/Scripts/passmaker.bash"'
-alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short'
-alias unban='"/home/$username/Dropbox/Scripts/unban.bash"'
-alias backupconfig='"/home/$username/Dropbox/Scripts/backupconf.bash"' 
-alias usage='~/Dropbox/Scripts/usage.bash' 
+alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short'  
 alias apachelog='tail -f /var/log/apache2/error.log' 
 alias syslog='tail -f /var/log/syslog' 
 
@@ -125,9 +104,10 @@ fi
 
 # Functions and aliases not depending on OS  
 
+export PATH="~/Dropbox/Scripts:$PATH"
 export CLASSPATH=$CLASSPATH:~/Dev/Alexandria/*
 
-alias delmappehttp='python -m SimpleHTTPServer 8080'
+alias shareFolderViaHTTP='python -m SimpleHTTPServer 8080'
 alias e="exit"
 alias cd..="cd .." 
 alias tracert="traceroute"
@@ -138,14 +118,11 @@ alias move='mv'
 alias fuckYou='kill'
 alias biggest='du -ksh *|sort -n'
 alias reload='source ~/.bash_profile' 
-alias removeblanks='python ~/Dropbox/Scripts/removeSpace.py'
-alias valuttakalk='python ~/Dropbox/Scripts/valuttakalkulator.py' 
 alias clean='clear'
 alias getInternetSpeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias weather='~/Dropbox/Scripts/ansiweather/ansiweather' 
 alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
 alias JSON='~/Dropbox/Scripts/JSON.sh/JSON.sh' 
-alias hr='~/Dropbox/Scripts/hr'
 
 extract () {
     if [ -f $1 ] ; then
