@@ -11,7 +11,7 @@ To use .bash_profile on Linux, remember to add
     . ~/.bash_profile
     fi
 to .bashrc.
-My bin-equivalent is found [Here](http://github.com/andmos/Scrips) and is placed in my Dropbox for easy sharing, just added to
+My bin-equivalent is found [Here](https://github.com/andmos/Scripts) and is placed in my Dropbox for easy sharing, just added to
 $PATH.
 
 ### .OSX
