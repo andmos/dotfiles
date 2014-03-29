@@ -83,6 +83,7 @@ export LANG=en_US.UTF-8
 alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short'  
 alias apachelog='tail -f /var/log/apache2/error.log' 
 alias syslog='tail -f /var/log/syslog' 
+alias distroVersion='cat /etc/*-release'
 
 function psgrep() { 
 ps axuf | grep -v grep | grep "$@" -i --color=auto; 
@@ -104,7 +105,7 @@ fi
 
 # Functions and aliases not depending on OS  
 
-export PATH="~/Dropbox/Scripts:$PATH"
+export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts. 
 export CLASSPATH=$CLASSPATH:~/Dev/Alexandria/*
 
 alias shareFolderViaHTTP='python -m SimpleHTTPServer 8080'
