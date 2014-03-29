@@ -86,11 +86,12 @@ alias apachelog='tail -f /var/log/apache2/error.log'
 alias syslog='tail -f /var/log/syslog' 
 alias distroVersion='cat /etc/*-release'
 
-function psgrep() { 
-ps axuf | grep -v grep | grep "$@" -i --color=auto; 
+function psgrep { 
+    ps axuf | grep -v grep | grep "$@" -i --color=auto; 
+
 }
 
-function ban() {
+function ban {
     if [ "`id -u`" == "0" ] ; then
                 iptables -A INPUT -s $1 -j DROP
                     else
@@ -126,7 +127,7 @@ alias weather='~/Dropbox/Scripts/ansiweather/ansiweather'
 alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
 alias JSON='~/Dropbox/Scripts/JSON.sh/JSON.sh' 
 
-extract () {
+function extract {
     if [ -f $1 ] ; then
       case $1 in
         *.tar.bz2)   tar xjf $1     ;;
@@ -145,13 +146,15 @@ extract () {
      else
          echo "'$1' is not a valid file"
      fi
+
 }
 
-countfiles() {
+function countfiles {
 ls | wc -l
+
 }
 
-function screenIt(){
+function screenIt {
     screen -S job -dm $1 
 }
 
