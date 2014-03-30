@@ -59,5 +59,8 @@ nvram boot-args="-v"
 # Enable full colorscheme for git
 git config --global color.ui true
 
+# Setting Vim as standard editor for git
+git config --global core.editor "vim" 
+
 killall Finder
 echo "Setup completed. You should reboot now."
