@@ -70,6 +70,10 @@ function unhide {
     chflags nohidden $1
 }
 
+ if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
+           . /opt/local/etc/profile.d/bash_completion.sh
+             fi
+
 echo "Mac - profil lastet" 
 
 fi
@@ -109,6 +113,7 @@ fi
 
 export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts. 
 export CLASSPATH=$CLASSPATH:~/Dev/Alexandria/*
+export EDITOR=vim 
 
 alias shareFolderViaHTTP='python -m SimpleHTTPServer 8080'
 alias e="exit"
@@ -136,6 +141,7 @@ function extract {
         *.rar)       unrar e $1     ;;
         *.gz)        gunzip $1      ;;
         *.tar)       tar xf $1      ;;
+        *.tar.xz)    tar xf $1      ;;
         *.tbz2)      tar xjf $1     ;;
         *.tgz)       tar xzf $1     ;;
         *.zip)       unzip $1       ;;
