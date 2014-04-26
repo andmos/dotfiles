@@ -36,8 +36,10 @@ export PATH="/Users/andreasmosti/GlassFish_Server/javadb/bin:$PATH"
 export TERM=xterm
 export CLASSPATH=/System/Library/Frameworks/JavaVM.framework/Classes/classes.jar:.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH="/usr/local/mysql/bin:$PATH" #mysql path  
+export PATH="/usr/local/mysql/bin:$PATH" 
 export PATH="/usr/texbin:$PATH" #Path for TeX and LaTeX 
+export PATH="/usr/local/apache-maven-3.2.1/bin:$PATH" 
+
 PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 
 function authme {
