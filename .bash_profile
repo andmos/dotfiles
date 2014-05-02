@@ -19,6 +19,7 @@ alias killDashboard='defaults write com.apple.dashboard mcx-disabled -boolean YE
 alias activateDashboard='defaults write com.apple.dashboard mcx-disabled -boolean NO; killall Dock'
 alias killSpotlight='sudo mdutil -i on'
 alias activateSpotlight='sudo sudo mdutil -i off' 
+alias forceEmptyTrash='rm -rf ~/.Trash/*'
 alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short' 
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias stfu="osascript -e 'set volume output muted true'" 
@@ -36,8 +37,10 @@ export PATH="/Users/andreasmosti/GlassFish_Server/javadb/bin:$PATH"
 export TERM=xterm
 export CLASSPATH=/System/Library/Frameworks/JavaVM.framework/Classes/classes.jar:.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH="/usr/local/mysql/bin:$PATH" #mysql path  
+export PATH="/usr/local/mysql/bin:$PATH" 
 export PATH="/usr/texbin:$PATH" #Path for TeX and LaTeX 
+export PATH="/usr/local/apache-maven-3.2.1/bin:$PATH" 
+
 PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
 
 function authme {
