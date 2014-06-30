@@ -135,6 +135,9 @@ alias weather='~/Dropbox/Scripts/ansiweather/ansiweather'
 alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
 alias JSON='~/Dropbox/Scripts/JSON.sh/JSON.sh' 
 
+alias runningDocker='docker ps -l -q'
+
+
 function extract {
     if [ -f $1 ] ; then
       case $1 in
