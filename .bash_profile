@@ -23,6 +23,7 @@ alias forceEmptyTrash='rm -rf ~/.Trash/*'
 alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short' 
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias stfu="osascript -e 'set volume output muted true'" 
+alias removeOldMacportsPackages="sudo port uninstall inactive"
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
