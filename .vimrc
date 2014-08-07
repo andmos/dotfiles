@@ -19,6 +19,9 @@ filetype plugin indent on
 " enable syntax highlighting
 syntax on
 
+" Fix backspace if not working
+set backspace=indent,eol,start
+
 " always show the status line as the second last line
 set laststatus=2
 
@@ -71,11 +74,7 @@ set grepprg=grep\ -nH\ $*
 " I don't like folding
 let g:Tex_Folding=0
 set iskeyword+=:
-
-set rtp+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on 
-
+set mouse=a
 " Colors for spell correction
 highlight SpellBad      ctermfg=Red         term=Reverse        guisp=Red       gui=undercurl   ctermbg=White 
 highlight SpellCap      ctermfg=Green       term=Reverse        guisp=Green     gui=undercurl   ctermbg=White 
