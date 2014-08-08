@@ -138,7 +138,12 @@ alias JSON='~/Dropbox/Scripts/JSON.sh/JSON.sh'
 
 alias runningDocker='docker ps -l -q'
 alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
-alias stopAllRunningDockerContainers='docker stop $(docker ps -a -q)'
+alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
+
+function git-forcepull {
+    git fetch --all
+    git reset --hard origin/master
+}
 
 function extract {
     if [ -f $1 ] ; then
