@@ -135,10 +135,13 @@ alias getInternetSpeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/d
 alias weather='~/Dropbox/Scripts/ansiweather/ansiweather' 
 alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
 alias JSON='~/Dropbox/Scripts/JSON.sh/JSON.sh' 
+alias mapNetwork='nmap -sP $1'
 
 alias runningDocker='docker ps -l -q'
 alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
+
+
 
 function git-forcepull {
     git fetch --all
