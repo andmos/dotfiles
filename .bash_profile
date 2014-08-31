@@ -176,7 +176,11 @@ ls | wc -l
 
 }
 
+
 function screenIt {
     screen -S job -dm $1 
 }
 
+function countLinesOfCode {
+    find . -name "*.$1" | xargs wc -l
+}
