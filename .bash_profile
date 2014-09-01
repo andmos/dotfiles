@@ -34,7 +34,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 #export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 #Paths / classpaths  
-export PATH="/Users/andreasmosti/GlassFish_Server/javadb/bin:$PATH" 
+ 
 export TERM=xterm
 export CLASSPATH=/System/Library/Frameworks/JavaVM.framework/Classes/classes.jar:.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
