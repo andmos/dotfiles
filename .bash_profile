@@ -78,7 +78,7 @@ function unhide {
            . /opt/local/etc/profile.d/bash_completion.sh
              fi
 
-echo "Mac - profil lastet" 
+echo "Mac - profile loaded" 
 
 fi
 
@@ -109,7 +109,7 @@ function ban {
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a     shell session *as a function*
                                 
-echo "Linux - profil lastet" 
+echo "Linux - profile loaded" 
 
 fi 
 
@@ -168,12 +168,10 @@ function extract {
      else
          echo "'$1' is not a valid file"
      fi
-
 }
 
 function countfiles {
 ls | wc -l
-
 }
 
 
