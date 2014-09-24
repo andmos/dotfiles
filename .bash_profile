@@ -141,6 +141,7 @@ alias runningDocker='docker ps -l -q'
 alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
 
+alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 
 
 function git-forcepull {
