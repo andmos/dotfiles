@@ -1,2 +1,7 @@
 #! /bin/bash
 cp .bash_profile ~/.bash_profile; cp .vimrc ~/.vimrc ; source ~/.bash_profile
+cat <<EOT >> ~/.bashrc
+if [ -f ~/.bash_profile ]; then
+    . ~/.bash_profile
+fi
+EOT
