@@ -1,0 +1,15 @@
+#! /bin/bash 
+# Since I got my scripts on both Dropbox and on GitHub AND my path is pointed to the dropbox-folder, 
+# this script fixes my self-provided paint-in-the-ass setup. 
+
+SCRIPTSREPO='https://github.com/andmos/Scripts.git'
+SCRIPTS=~/Dropbox/Scripts/
+
+if [ ! -d "$SCRIPTS" ]; then
+    mkdir -p ~/Dropbox
+    cd ~/Dropbox
+    git clone $SCRIPTSREPO
+    
+else
+    echo "Scripts already in place stupid!"
+fi
