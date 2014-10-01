@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# Sets up Atom for me
+
+cp config.cson ~/.atom; cp styles.less ~/.atom
+filename="atomPackages.txt"
+
+while read -r package
+do 
+    apm install $package > /dev/null 2>&1 
+    echo $package
+done < "$filename"
