@@ -1,11 +1,8 @@
 Dotfiles
 ========
-
-
-
 ### Dotfiles
 I use .bash_profile on both Linux and OSX, a uname-check fixes the platformspesific values.
-To use .bash_profile on Linux, remember to add 
+To use .bash_profile on Linux, remember to add
 
     if [ -f ~/.bash_profile ]; then
     . ~/.bash_profile
@@ -25,10 +22,18 @@ Since I haven't gotten around to install [Homebrew](http://brew.sh/) yet, I stil
 
     ./installPorts
 
-To get you're own list of installed ports use the following command: 
+To get you're own list of installed ports use the following command:
 
     sudo port installed | sed -e 's/([^()]*)//g' | sed s/@[^@]*$// > InstalledPorts.txt
 
 If you find yourself doing this more than once, do as I do: script the sucker.
 
 Remember to use the updated Macports version of Bash located in ``/opt/local/bin/bash -l``
+
+### Atom
+I have started playing with [Atom](https://atom.io/) as my new cross platform editor.
+So far it looks promising. The `atom` folder contains my settings and extension packages.
+When Atom and its command line tools are installed,
+
+    atom/configureAtom
+takes care of the rest.
