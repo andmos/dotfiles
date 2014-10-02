@@ -1,3 +1,4 @@
 language-csharp
 language-docker
 visual-studio-dark-syntax
+VisualStudio
