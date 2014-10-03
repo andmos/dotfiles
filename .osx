@@ -62,5 +62,13 @@ git config --global color.ui true
 # Setting Vim as standard editor for git
 git config --global core.editor "vim" 
 
+# Enabling UTF-8 ONLY in Terminal.app and setting the Pro theme by default
+defaults write com.apple.terminal StringEncodings -array 4
+defaults write com.apple.Terminal "Default Window Settings" -string "Pro"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
+
+# Disable automatic emoji substitution (i.e. use plain text smileys)
+defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+
 killall Finder
 echo "Setup completed. You should reboot now."
