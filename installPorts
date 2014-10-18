@@ -4,6 +4,11 @@
 
 filename="installedPorts.txt"
 
+if (( $UID != 0 )); then
+    echo "Not root, exiting.."
+    exit 1
+fi
+
 sudo port selfupdate
 sudo port upgrade outdated
 
