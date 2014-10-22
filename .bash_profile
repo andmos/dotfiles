@@ -105,7 +105,7 @@ function ban {
                     else
                                 sudo iptables -A INPUT -s $1 -j DROP
                                     fi
-                }
+}
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a     shell session *as a function*
                                 
@@ -142,7 +142,7 @@ alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
 
 alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
-
+alias whatTakesMySpace='du -h --max-depth=1 /'
 
 function git-forcepull {
     git fetch --all
@@ -183,3 +183,5 @@ function screenIt {
 function countLinesOfCode {
     find . -name "*.$1" | xargs wc -l
 }
+
+
