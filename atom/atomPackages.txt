@@ -3,3 +3,4 @@ language-docker
 visual-studio-dark-syntax
 VisualStudio
 unity-ui
+pretty-json
