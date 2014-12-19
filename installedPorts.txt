@@ -57,7 +57,6 @@ gdk-pixbuf2
 getopt
 gettext
 ghostscript
-glances
 glib2
 gmake
 gmp
@@ -151,7 +150,6 @@ ntop
 openjade
 opensp
 openssl
-ophcrack
 orbit2
 p5.12-getopt-long
 p5.12-io-tty
