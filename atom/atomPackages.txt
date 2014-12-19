@@ -5,3 +5,4 @@ VisualStudio
 unity-ui
 pretty-json
 language-autohotkey
+color-picker
