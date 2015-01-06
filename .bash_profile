@@ -140,6 +140,7 @@ alias mapNetwork='nmap -sP $1'
 alias runningDocker='docker ps -l -q'
 alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
+alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs docker rm'
 
 alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
@@ -184,4 +185,13 @@ function countLinesOfCode {
     find . -name "*.$1" | xargs wc -l
 }
 
+
+
+##
+# Your previous /Users/andreasmosti/.bash_profile file was backed up as /Users/andreasmosti/.bash_profile.macports-saved_2014-11-15_at_11:25:30
+##
+
+# MacPorts Installer addition on 2014-11-15_at_11:25:30: adding an appropriate PATH variable for use with MacPorts.
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+# Finished adapting your PATH environment variable for use with MacPorts.
 
