@@ -8,3 +8,5 @@ pretty-json
 language-autohotkey
 color-picker
 latex
+autocomplete-plus-async
+omnisharp-atom
