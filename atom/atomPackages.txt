@@ -10,3 +10,5 @@ pretty-json
 color-picker
 latex
 asciidoc-preview
+autocomplete-plus-async
+omnisharp-atom
