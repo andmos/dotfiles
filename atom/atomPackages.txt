@@ -1,10 +1,12 @@
 language-csharp
 language-docker
 language-latex
+language-autohotkey
+language-asciidoc
 visual-studio-dark-syntax
 VisualStudio
 unity-ui
 pretty-json
-language-autohotkey
 color-picker
 latex
+asciidoc-preview
