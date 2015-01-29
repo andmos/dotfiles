@@ -188,3 +188,7 @@ function countLinesOfCode {
     find . -name "*.$1" | xargs wc -l
 }
 
+function findAndDelete {
+    find . -name "$1" -type f -delete
+}
+
