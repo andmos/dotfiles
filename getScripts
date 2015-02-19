@@ -3,7 +3,7 @@
 # this script fixes my self-provided paint-in-the-ass setup. 
 
 SCRIPTSREPO='https://github.com/andmos/Scripts.git'
-SCRIPTS=~/Dropbox/Scripts/
+SCRIPTS=~/Dropbox/scripts/
 
 if [ ! -d "$SCRIPTS" ]; then
     mkdir -p ~/Dropbox
