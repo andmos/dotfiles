@@ -10,5 +10,5 @@ pretty-json
 color-picker
 latex
 asciidoc-preview
-autocomplete-plus-async
+autocomplete-plus
 omnisharp-atom
