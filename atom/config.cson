@@ -1,12 +1,19 @@
-'exception-reporting':
-  'userId': '22a4b39c-2954-2d17-ac1c-b10e8ac80cb4'
-'release-notes':
-  'viewedVersion': '0.60.0'
-'welcome':
-  'showOnStartup': false
-'metrics':
-  'userId': '23bbd58ef1a6089eb8b038ad1ee356f1a4fa72f3'
-'core':
-  'projectHome': '~/Dev'
-'editor':
-  'invisibles': {}
+"*":
+  "exception-reporting":
+    userId: "22a4b39c-2954-2d17-ac1c-b10e8ac80cb4"
+  "release-notes":
+    viewedVersion: "0.60.0"
+  welcome:
+    showOnStartup: false
+  metrics:
+    userId: "23bbd58ef1a6089eb8b038ad1ee356f1a4fa72f3"
+  core:
+    projectHome: "~/Dev"
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    invisibles: {}
+  "autocomplete-plus-async":
+    autoActivationDelay: 1
