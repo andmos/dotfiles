@@ -74,6 +74,16 @@ function unhide {
     chflags nohidden $1
 }
 
+function code () {
+        if [[ $# = 0 ]]
+                then
+                            open -a "Visual Studio Code"
+                                else
+                                            [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
+                                                    open -a "Visual Studio Code" --args "$F"
+                                                        fi
+                                                    }
+
  if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
            . /opt/local/etc/profile.d/bash_completion.sh
              fi
@@ -128,6 +138,7 @@ alias type='cat'
 alias copy='cp'
 alias move='mv'
 alias fuckYou='kill'
+alias please='sudo !!'
 alias biggest='du -ksh *|sort -n'
 alias reload='source ~/.bash_profile' 
 alias clean='clear'
