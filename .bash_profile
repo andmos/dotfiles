@@ -149,6 +149,8 @@ alias JSON='~/Dropbox/Scripts/JSON.sh/JSON.sh'
 alias mapNetwork='nmap -sP $1'
 alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
+alias scriptcs='mono ~/Dev/scriptcs/artifacts/Release/bin/scriptcs.exe'
+
 
 # Docker-aliases 
 alias runningDocker='docker ps -l -q'
@@ -156,6 +158,7 @@ alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
 alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs docker rm'
 alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker'
+
 
 
 
