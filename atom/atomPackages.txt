@@ -3,6 +3,7 @@ language-docker
 language-latex
 language-autohotkey
 language-asciidoc
+language-powershell
 visual-studio-dark-syntax
 VisualStudio
 unity-ui
