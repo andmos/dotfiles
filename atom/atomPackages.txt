@@ -1,4 +1,3 @@
-language-csharp
 language-docker
 language-latex
 language-autohotkey
