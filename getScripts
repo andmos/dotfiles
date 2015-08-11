@@ -6,9 +6,7 @@ SCRIPTSREPO='https://github.com/andmos/Scripts.git'
 SCRIPTS=~/Dropbox/scripts/
 
 if [ ! -d "$SCRIPTS" ]; then
-    mkdir -p ~/Dropbox
-    cd ~/Dropbox
-    git clone $SCRIPTSREPO
+    git clone $SCRIPTSREPO ~/Dropbox
     
 else
     echo "Scripts already in place stupid!"
