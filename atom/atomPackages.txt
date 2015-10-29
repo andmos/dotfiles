@@ -12,3 +12,4 @@ latex
 asciidoc-preview
 autocomplete-plus
 omnisharp-atom
+ionide-paket 
