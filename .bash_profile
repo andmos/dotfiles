@@ -158,7 +158,7 @@ alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
 alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs docker rm'
 alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker'
-
+alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc'
 
 
 
