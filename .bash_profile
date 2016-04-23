@@ -206,3 +206,13 @@ function findAndDelete {
     find . -name "$1" -type f -delete
 }
 
+function atom? {
+    atomFolder=~/.atom
+    if [ ! -d $atomFolder ]  
+    then 
+        echo "no atom!?"
+    else 
+        echo "jep, Atom should be here. Config at $atomFolder" 
+    fi 
+}
+
