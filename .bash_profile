@@ -207,12 +207,13 @@ function findAndDelete {
 }
 
 function atom? {
-    atomFolder=~/.atom
-    if [ ! -d $atomFolder ]  
+    atomConfigFolder=~/.atom
+    atomPath=$(command -v atom)
+    if [ ! -d $atomConfigFolder ] && [ -z $atomPath ] 
     then 
         echo "no atom!?"
     else 
-        echo "jep, Atom should be here. Config at $atomFolder" 
+        echo "jep, Atom should be here. Config at $atomConfigFolder, bin in $atomPath" 
     fi 
 }
 
