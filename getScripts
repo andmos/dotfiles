@@ -3,10 +3,10 @@
 # this script fixes my self-provided paint-in-the-ass setup. 
 
 SCRIPTSREPO='https://github.com/andmos/Scripts.git'
-SCRIPTS=~/Dropbox/scripts/
+SCRIPTS=~/Dropbox/Scripts/
 
 if [ ! -d "$SCRIPTS" ]; then
-    git clone $SCRIPTSREPO ~/Dropbox
+    git clone $SCRIPTSREPO $SCRIPTS
     
 else
     echo "Scripts already in place stupid!"
