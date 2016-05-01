@@ -155,6 +155,7 @@ alias scriptcs='mono ~/Dev/scriptcs/artifacts/Release/bin/scriptcs.exe'
 # Docker-aliases 
 alias runningDocker='docker ps -l -q'
 alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
+alias removeAllDockerImages='sudo docker rmi $(docker images -q)'
 alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
 alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs docker rm'
 alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker'
