@@ -13,4 +13,6 @@ autocomplete-plus
 omnisharp-atom
 latex-autocomplete
 ionide-paket
-minimap 
+minimap
+svg-preview
+
