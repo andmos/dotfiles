@@ -2,6 +2,8 @@ language-docker
 language-latex
 language-asciidoc
 language-powershell
+language-ansible
+ansible-vault
 visual-studio-dark-syntax
 VisualStudio
 unity-ui
