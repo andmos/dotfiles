@@ -134,7 +134,7 @@ export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts.
 export CLASSPATH=$CLASSPATH:~/Dev/Alexandria/*
 export EDITOR=vim 
 
-alias shareFolderViaHTTP='python -m SimpleHTTPServer 8080'
+alias shareFolderViaHTTP='python -m SimpleHTTPServer 8000'
 alias e="exit"
 alias cd..="cd .." 
 alias tracert="traceroute"
@@ -166,7 +166,7 @@ alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs do
 alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker'
 alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc'
 
-
+alias gs='git status'
 
 function git-forcepull {
     git fetch --all
