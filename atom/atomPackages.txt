@@ -17,4 +17,4 @@ latex-autocomplete
 ionide-paket
 minimap
 svg-preview
-
+file-icons
