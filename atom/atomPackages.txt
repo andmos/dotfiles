@@ -18,3 +18,4 @@ ionide-paket
 minimap
 svg-preview
 file-icons
+sort-lines
