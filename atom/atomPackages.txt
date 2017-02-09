@@ -11,7 +11,6 @@ pretty-json
 color-picker
 latex
 asciidoc-preview
-autocomplete-plus
 omnisharp-atom
 latex-autocomplete
 ionide-paket
