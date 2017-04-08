@@ -38,7 +38,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export TERM=xterm
 export CLASSPATH=/System/Library/Frameworks/JavaVM.framework/Classes/classes.jar:.
 export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export PATH="/usr/local/mysql/bin:$PATH" 
 export PATH="/usr/texbin:$PATH" #Path for TeX and LaTeX 
 export PATH="/usr/local/apache-maven-3.2.1/bin:$PATH" 
 
@@ -73,16 +72,6 @@ function hide {
 function unhide {
     chflags nohidden $1
 }
-
-function code () {
-        if [[ $# = 0 ]]
-                then
-                            open -a "Visual Studio Code"
-                                else
-                                            [[ $1 = /* ]] && F="$1" || F="$PWD/${1#./}"
-                                                    open -a "Visual Studio Code" --args "$F"
-                                                        fi
-                                                    }
 
  if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
            . /opt/local/etc/profile.d/bash_completion.sh
@@ -131,10 +120,10 @@ parse_git_branch() {
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts. 
-export CLASSPATH=$CLASSPATH:~/Dev/Alexandria/*
+export PATH="~/Dev/context/tex/texmf-osx-64/bin:$PATH"
 export EDITOR=vim 
 
-alias shareFolderViaHTTP='python -m SimpleHTTPServer 8000'
+alias pythonHttp='python -m SimpleHTTPServer 8000'
 alias e="exit"
 alias cd..="cd .." 
 alias tracert="traceroute"
@@ -147,6 +136,7 @@ alias please='sudo !!'
 alias biggest='du -ksh *|sort -n'
 alias reload='source ~/.bash_profile' 
 alias clean='clear'
+alias where='which'
 alias getInternetSpeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias weather='~/Dev/ansiweather/ansiweather -l Trondheim -u metric' 
 alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
@@ -223,3 +213,4 @@ function atom? {
     fi 
 }
 
+eval $(/usr/libexec/path_helper -s)
