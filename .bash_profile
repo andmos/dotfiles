@@ -24,6 +24,8 @@ alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short'
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias stfu="osascript -e 'set volume output muted true'" 
 alias removeOldMacportsPackages="sudo port uninstall inactive"
+alias github=GitHub
+
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -72,6 +74,22 @@ function hide {
 function unhide {
     chflags nohidden $1
 }
+
+function GitHub {
+if [ ! -d .git ] 
+then
+   echo "This folder is not under git" && return
+fi 
+git_url=`git config --get remote.origin.url`
+if [[ $git_url != "https://github"* ]] ;  
+then 
+    echo $git_url
+    echo "Remote origin is not GitHub" && return
+fi 
+url=${git_url%.git}
+open $url
+}
+
 
  if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
            . /opt/local/etc/profile.d/bash_completion.sh
@@ -201,6 +219,7 @@ function countLinesOfCode {
 function findAndDelete {
     find . -name "$1" -type f -delete
 }
+
 
 function atom? {
     atomConfigFolder=~/.atom
