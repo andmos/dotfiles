@@ -24,7 +24,7 @@ alias dnsip='dig myip.opendns.com @resolver1.opendns.com +short'
 alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias stfu="osascript -e 'set volume output muted true'" 
 alias removeOldMacportsPackages="sudo port uninstall inactive"
-alias github=GitHub
+alias repo=Repo
 
 
 export LC_ALL=en_US.UTF-8
@@ -75,17 +75,14 @@ function unhide {
     chflags nohidden $1
 }
 
-function GitHub {
+function Repo {
 if [ ! -d .git ] 
 then
    echo "This folder is not under git" && return
 fi 
 git_url=`git config --get remote.origin.url`
-if [[ $git_url != "https://github"* ]] ;  
-then 
-    echo $git_url
-    echo "Remote origin is not GitHub" && return
-fi 
+git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
+echo $git_url 
 url=${git_url%.git}
 open $url
 }
