@@ -3,6 +3,7 @@ language-latex
 language-asciidoc
 language-powershell
 language-ansible
+language-terraform
 ansible-vault
 visual-studio-dark-syntax
 VisualStudio
