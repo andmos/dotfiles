@@ -1,0 +1,12 @@
+#! /bin/bash
+
+# Installs brews for HomeBrew listed in textfile.
+
+filename="installedBrews.txt"
+
+brew update
+
+while read -r line
+do
+    brew install $line
+done < "$filename"

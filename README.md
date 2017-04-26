@@ -30,6 +30,22 @@ If you find yourself doing this more than once, do as I do: script the sucker.
 
 Remember to use the updated Macports version of Bash located in ``/opt/local/bin/bash -l``
 
+### HomeBrew
+
+Hey! It just took some years and a new Mac, but here are some brews for HomeBrew. 
+
+```
+./installBrews
+```
+
+Listing out with 
+
+```
+brew list > installedBrews.txt
+```
+
+
+
 ### Atom
 I have started playing with [Atom](https://atom.io/) as my new cross platform editor.
 So far it looks promising. The `atom` folder contains my settings and extension packages.
