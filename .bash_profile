@@ -11,6 +11,7 @@ if [[ "$(uname)" == "Darwin" ]]
 then
 
 alias t='"/Users/$username/Dropbox/Scripts/todo.sh"'
+alias todo='t'
 alias latex='perl ~/.latexmk'
 alias flushdns='dscacheutil -flushcache'
 alias tor-ssh='ssh -o ProxyCommand="nc -X 4 -x localhost:9050 %h %p"'
