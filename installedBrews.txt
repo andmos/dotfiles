@@ -1,6 +1,7 @@
 ansible
 bash
 bash-completion
+ctop
 gdbm
 git
 go
