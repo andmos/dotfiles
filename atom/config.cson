@@ -17,3 +17,5 @@
     invisibles: {}
   "autocomplete-plus-async":
     autoActivationDelay: 1
+  "file-types":
+    inventory: "source.ansible"
