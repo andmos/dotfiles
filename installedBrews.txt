@@ -1,4 +1,5 @@
 ansible
+ant
 bash
 bash-completion
 ctop
@@ -6,10 +7,12 @@ gdbm
 git
 go
 htop
+jq
 libyaml
 mkdocs
 mobile-shell
 nmap
+oniguruma
 openssl
 openssl@1.1
 pandoc
@@ -22,3 +25,4 @@ sqlite
 terraform
 unrar
 wget
+xmlstarlet
