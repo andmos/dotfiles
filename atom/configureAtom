@@ -2,7 +2,7 @@
 
 # Sets up Atom for me
 
-cp config.cson ~/.atom; cp styles.less ~/.atom
+cp config.cson ~/.atom; cp styles.less ~/.atom; cp snippets.cson ~/.atom;  
 filename="atomPackages.txt"
 
 while read -r package
