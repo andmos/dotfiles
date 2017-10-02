@@ -24,5 +24,6 @@ sl
 sqlite
 terraform
 unrar
+vault
 wget
 xmlstarlet
