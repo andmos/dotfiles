@@ -6,6 +6,7 @@ ctop
 gdbm
 git
 go
+gpg1
 htop
 jq
 libyaml
