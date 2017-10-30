@@ -5,13 +5,14 @@ bash-completion
 ctop
 gdbm
 git
+gnupg@1.4
 go
-gpg1
 htop
 jq
 libyaml
 mkdocs
 mobile-shell
+mosh
 nmap
 oniguruma
 openssl
@@ -24,6 +25,7 @@ readline
 sl
 sqlite
 terraform
+tree
 unrar
 vault
 wget
