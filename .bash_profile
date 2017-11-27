@@ -172,6 +172,7 @@ alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs do
 alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker'
 alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc'
 
+
 alias gs='git status'
 
 function git-forcepull {
@@ -229,5 +230,11 @@ function atom? {
         echo "jep, Atom should be here. Config at $atomConfigFolder, bin in $atomPath" 
     fi 
 }
+
+function lb() {
+    vim ~/Notes/$(date '+%Y-%m-%d').md
+}
+
+
 
 eval $(/usr/libexec/path_helper -s)
