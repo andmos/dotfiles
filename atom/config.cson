@@ -13,9 +13,14 @@
       "atom-dark-ui"
       "atom-dark-syntax"
     ]
+    customFileTypes:
+      'source.ansible': [
+        'inventory'
+    ]
   editor:
     invisibles: {}
   "autocomplete-plus-async":
     autoActivationDelay: 1
   "file-types":
-    inventory: "source.ansible"
+    ".*/group_vars/.*": "source.ansible"
+    ".*/host_vars/.*": "source.ansible"
