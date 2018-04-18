@@ -21,3 +21,4 @@ svg-preview
 file-icons
 sort-lines
 file-types
+zentabs
