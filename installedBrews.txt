@@ -17,6 +17,7 @@ nmap
 oniguruma
 openssl
 openssl@1.1
+packer
 pandoc
 pkg-config
 protobuf
