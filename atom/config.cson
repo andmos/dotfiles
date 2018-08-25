@@ -20,7 +20,4 @@
   editor:
     invisibles: {}
   "autocomplete-plus-async":
-    autoActivationDelay: 1
-  "file-types":
-    ".*/group_vars/.*": "source.ansible"
-    ".*/host_vars/.*": "source.ansible"
+    autoActivationDelay: 1 
