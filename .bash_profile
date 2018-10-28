@@ -10,6 +10,7 @@ export username=$(whoami)
 if [[ "$(uname)" == "Darwin" ]] 
 then
 
+alias caffeine='caffeinate -s &'
 alias t='"/Users/$username/Dropbox/Scripts/todo.sh"'
 alias todo='t'
 alias latex='perl ~/.latexmk'
