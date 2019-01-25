@@ -10,6 +10,7 @@ export username=$(whoami)
 if [[ "$(uname)" == "Darwin" ]] 
 then
 
+alias caffeine='caffeinate -s &'
 alias t='"/Users/$username/Dropbox/Scripts/todo.sh"'
 alias todo='t'
 alias latex='perl ~/.latexmk'
@@ -156,7 +157,6 @@ alias where='which'
 alias getInternetSpeed='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
 alias weather='~/Dev/ansiweather/ansiweather -l Trondheim -u metric' 
 alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
-alias JSON='~/Dev/JSON.sh/JSON.sh' 
 alias mapNetwork='nmap -sP $1'
 alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
@@ -235,6 +235,14 @@ function lb() {
     vim ~/Notes/$(date '+%Y-%m-%d').md
 }
 
+function jsonToEnvironment {
+    if [ -f $1 ]; then
+        for s in $(jq -r "to_entries|map(\"\(.key)=\(.value|tostring)\")|.[]" $1) 
+        do
+            export $s
+        done
+    fi
+}
 
 
 eval $(/usr/libexec/path_helper -s)
