@@ -131,8 +131,10 @@ fi
 
 # Functions and aliases not depending on OS  
 
+if ls .*.env >/dev/null 2>&1; then
+        source .*.env
+    fi
 
-source .*.env
 
 parse_git_branch() {
          git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
