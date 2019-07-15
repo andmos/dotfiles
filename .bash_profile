@@ -167,6 +167,10 @@ alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
 alias scriptcs='mono ~/Dev/scriptcs/artifacts/Release/bin/scriptcs.exe'
 
+# Blueye
+alias p2="ssh -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no' root@192.168.1.101"
+alias uscp="scp -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no'"
+eval "$(thefuck --alias)"
 
 # Docker-aliases 
 alias runningDocker='docker ps -l -q'
@@ -178,11 +182,24 @@ alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_6
 alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc'
 
 
+# git
 alias gs='git status'
+
+function gclean 
+{
+    git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+}
 
 function git-forcepull {
     git fetch --all
     git reset --hard origin/master
+}
+
+function git-cleanmaster(){
+	git checkout master
+	git pull
+	git remote prune origin
+	git branch --merged | grep -v "\*" | xargs -rn 1 git branch -d
 }
 
 function extract {
