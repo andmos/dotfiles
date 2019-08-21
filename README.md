@@ -34,17 +34,10 @@ Remember to use the updated Macports version of Bash located in ``/opt/local/bin
 
 Hey! It just took some years and a new Mac, but here are some brews for HomeBrew. 
 
-```
-./installBrews
-```
+Install brews from `Brewfile`: 
+`brew bundle`
 
-Listing out with 
-
-```
-brew list > installedBrews.txt
-```
-
-
+(`brew bundle dump` to generate `Brewfile` on local computer)
 
 ### Atom
 I have started playing with [Atom](https://atom.io/) as my new cross platform editor.
