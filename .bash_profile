@@ -170,6 +170,7 @@ alias scriptcs='mono ~/Dev/scriptcs/artifacts/Release/bin/scriptcs.exe'
 # Blueye
 alias p2="ssh -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no' root@192.168.1.101"
 alias uscp="scp -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no'"
+alias p2info='curl -s http://192.168.1.101:9090/diagnostics/drone_info | jq'
 eval "$(thefuck --alias)"
 
 # Docker-aliases 
