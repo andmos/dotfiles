@@ -72,5 +72,8 @@ defaults write com.apple.Terminal "Startup Window Settings" -string "Pro"
 # Disable automatic emoji substitution (i.e. use plain text smileys)
 defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
 
+# Disable GateKeeper 
+sudo spctl --master-disable
+
 killall Finder
 echo "Setup completed. You should reboot now."
