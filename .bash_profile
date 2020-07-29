@@ -135,6 +135,9 @@ if ls .*.env >/dev/null 2>&1; then
         source .*.env
     fi
 
+if [ -f ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md ] ; then
+    cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md |grep '^[0-9#]'
+fi
 
 parse_git_branch() {
          git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -165,7 +168,8 @@ alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
 alias mapNetwork='nmap -sP $1'
 alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
-alias scriptcs='mono ~/Dev/scriptcs/artifacts/Release/bin/scriptcs.exe'
+alias sortSpaceUsage='du -hd 1 . | sort -hr'
+alias unknowableFuture='cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md'
 
 # Blueye
 alias p2="ssh -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no' root@192.168.1.101"
