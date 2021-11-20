@@ -1,3 +1,5 @@
+" Inspiration: https://dougblack.io/words/a-good-vimrc.html
+
 " numbered lines
 set number
 
@@ -57,10 +59,10 @@ augroup END
 set textwidth=130
 
 " Set word spelling on
-"set spell"
+" set spell"
 
 " Language for spelling
-"setlocal spell spelllang=nb"
+" setlocal spell spelllang=nb"
 " setlocal spell spelllang=en_us
 
 " Latex stuff
