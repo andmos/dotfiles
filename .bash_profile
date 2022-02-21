@@ -93,46 +93,6 @@ open $url
  if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
            . /opt/local/etc/profile.d/bash_completion.sh
              fi
-# node version manager
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
-
-# Java
-
-_java_version() {
-    local version_path=$1
-    if [[ -f $version_path/release ]]; then
-        cat $version_path/release | grep "JAVA_VERSION=" | sed -E 's/JAVA_VERSION=|\"//g'
-    else
-        echo $path
-    fi
-}
-
-# List current version with "jdk", or change with "jdk 12"
-jdk() {
-    local version=${1:-""}
-    local silent=${2:-false}
-    if [[ $version = "" ]]; then
-        java -version
-    else
-        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
-        if [[ $silent = false ]]; then
-            java -version
-        fi
-    fi
-}
-
-jdks() {
-    echo "Java versions"
-    /usr/libexec/java_home -V 2>&1 | sed 1d | sed '$d' | cut -d, -f1
-    echo "Global: $(_java_version $(/usr/libexec/java_home))"
-    if [[ ! -z $JAVA_HOME ]]; then
-        echo "Local:  $(_java_version $JAVA_HOME)"
-    fi
-}
-
-if [ -e /Users/$username/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/$username/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-
 
 echo "Mac - profile loaded" 
 
@@ -175,6 +135,9 @@ if ls .*.env >/dev/null 2>&1; then
         source .*.env
     fi
 
+if [ -f ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md ] ; then
+    cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md |grep '^[0-9#]'
+fi
 
 parse_git_branch() {
          git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -205,7 +168,8 @@ alias didyouknow='echo "Did you know that:"; whatis $(ls /bin | shuf -n 1)'
 alias mapNetwork='nmap -sP $1'
 alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
-alias scriptcs='mono ~/Dev/scriptcs/artifacts/Release/bin/scriptcs.exe'
+alias sortSpaceUsage='du -hd 1 . | sort -hr'
+alias unknowableFuture='cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md'
 
 # Blueye
 alias p2="ssh -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no' root@192.168.1.101"
@@ -225,7 +189,6 @@ alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v
 
 # git
 alias gs='git status'
-alias git-count-contributors='git shortlog -s -n'
 
 function gclean 
 {
@@ -307,5 +270,3 @@ function jsonToEnvironment {
 
 
 eval $(/usr/libexec/path_helper -s)
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-
