@@ -170,6 +170,7 @@ alias git-removeAllDeletedFilesfromGit='git rm $(git ls-files --deleted)'
 alias whatTakesMySpace='du -h --max-depth=1 /'
 alias sortSpaceUsage='du -hd 1 . | sort -hr'
 alias unknowableFuture='cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md'
+alias week='date +%V'
 
 # Blueye
 alias p2="ssh -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no' root@192.168.1.101"
