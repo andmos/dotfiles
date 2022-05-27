@@ -1,8 +1,14 @@
 // Place your settings in this file to overwrite the default settings
 {
-	"editor.fontFamily": "Source Code Pro",
-	"editor.fontSize": 12,
-	"workbench.editor.limit.enabled": true,
-	"workbench.editor.limit.value": 5
-		
+    "editor.fontFamily": "Source Code Pro",
+    "workbench.colorTheme": "Visual Studio Dark",
+    "alex.enable": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "omnisharp.loggingLevel": "debug",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.minimap.enabled": false,
+    "git.autofetch": true,
+    "editor.largeFileOptimizations": false
 }
