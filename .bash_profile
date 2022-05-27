@@ -172,12 +172,6 @@ alias sortSpaceUsage='du -hd 1 . | sort -hr'
 alias unknowableFuture='cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md'
 alias week='date +%V'
 
-# Blueye
-alias p2="ssh -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no' root@192.168.1.101"
-alias uscp="scp -o 'UserKnownHostsFile=/dev/null' -o 'StrictHostKeyChecking=no'"
-alias p2info='curl -s http://192.168.1.101:9090/diagnostics/drone_info | jq'
-eval "$(thefuck --alias)"
-
 # Docker-aliases 
 alias runningDocker='docker ps -l -q'
 alias removeAllDockerContainers='sudo docker rm $(sudo docker ps -a -q)'
@@ -186,7 +180,6 @@ alias stopAllRunningDockerContainers='sudo docker stop $(sudo docker ps -a -q)'
 alias removeNonRunningDockerContainers='sudo docker ps -a | cut -c-12 | xargs docker rm'
 alias getLatestDockerBinary='sudo wget https://get.docker.com/builds/Linux/x86_64/docker-latest -O /usr/bin/docker'
 alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v /etc:/etc spotify/docker-gc'
-
 
 # git
 alias gs='git status'
@@ -228,7 +221,7 @@ function extract {
 }
 
 function countfiles {
-ls | wc -l
+    ls | wc -l
 }
 
 
@@ -269,5 +262,3 @@ function jsonToEnvironment {
     fi
 }
 
-
-eval $(/usr/libexec/path_helper -s)
