@@ -139,10 +139,6 @@ for PROFILE in ~/.bash_profile_*; do
     fi
 done
 
-if [ -f ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md ] ; then
-    cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md |grep '^[0-9#]'
-fi
-
 parse_git_branch() {
          git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
      }
