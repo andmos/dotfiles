@@ -1,0 +1,44 @@
+# Java
+
+_java_version() {
+    local version_path=$1
+    if [[ -f $version_path/release ]]; then
+        cat $version_path/release | grep "JAVA_VERSION=" | sed -E 's/JAVA_VERSION=|\"//g'
+    else
+        echo $path
+    fi
+}
+
+# List current version with "jdk", or change with "jdk 12"
+jdk() {
+    local version=${1:-""}
+    local silent=${2:-false}
+    if [[ $version = "" ]]; then
+        java -version
+    else
+        export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+        if [[ $silent = false ]]; then
+            java -version
+        fi
+    fi
+}
+
+jdks() {
+    echo "Java versions"
+    /usr/libexec/java_home -V 2>&1 | sed 1d | sed '$d' | cut -d, -f1
+    echo "Global: $(_java_version $(/usr/libexec/java_home))"
+    if [[ ! -z $JAVA_HOME ]]; then
+        echo "Local:  $(_java_version $JAVA_HOME)"
+    fi
+}
+
+# node version manager
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+function randomBookNote {
+    curl -s https://app.amosti.net/reading/api/notes/random | jq '(.note) + " - " + (.authors[]) + ", " + (.title)'
+}
+
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+if [ -e /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
