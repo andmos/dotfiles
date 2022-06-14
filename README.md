@@ -39,10 +39,3 @@ Install brews from `Brewfile`:
 
 (`brew bundle dump` to generate `Brewfile` on local computer)
 
-### Atom
-I have started playing with [Atom](https://atom.io/) as my new cross platform editor.
-So far it looks promising. The `atom` folder contains my settings and extension packages.
-When Atom and its command line tools are installed,
-
-    atom/configureAtom
-takes care of the rest.
