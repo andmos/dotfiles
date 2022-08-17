@@ -10,5 +10,15 @@
     "security.workspace.trust.untrustedFiles": "open",
     "editor.minimap.enabled": false,
     "git.autofetch": true,
-    "editor.largeFileOptimizations": false
+    "editor.largeFileOptimizations": false,
+    "workbench.iconTheme": "file-icons",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
+    "workbench.editor.limit.enabled": true
 }
