@@ -148,6 +148,7 @@ export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts.
 export PATH="~/Dev/context/tex/texmf-osx-64/bin:$PATH"
 export EDITOR=vim 
 
+alias dev='cd ~/Dev'
 alias pythonHttp='python -m SimpleHTTPServer 8000'
 alias e="exit"
 alias cd..="cd .." 
