@@ -77,15 +77,18 @@ function unhide {
 }
 
 function Repo {
-if [ ! -d .git ] 
-then
-   echo "This folder is not under git" && return
-fi 
-git_url=`git config --get remote.origin.url`
-git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
-echo $git_url 
-url=${git_url%.git}
-open $url
+    gitFolder="$(while [ ! -d ".git" -a / != "$PWD" ]; do cd .. ;done; [ / != "$PWD" ] && echo $PWD || echo '')"
+    if [ -z "$gitFolder" ]
+    then
+        echo "This could not find git folder" && return
+    fi
+    cd $gitFolder
+    git_url=`git config --get remote.origin.url`
+    git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
+    echo $git_url 
+    url=${git_url%.git}
+    open $url
+    cd -
 }
 
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
