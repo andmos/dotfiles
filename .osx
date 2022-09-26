@@ -75,5 +75,9 @@ defaults write com.apple.messageshelper.MessageController SOInputLineSettings -d
 # Disable GateKeeper 
 sudo spctl --master-disable
 
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 killall Finder
+killall Dock
 echo "Setup completed. You should reboot now."
