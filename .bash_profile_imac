@@ -1,0 +1,17 @@
+if [ -f ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md ] ; then
+    cat ~/Dropbox/LifeChangingMaterial/How.to.thrive.in.an.unknowable.future.md |grep '^[0-9#]'
+fi
+
+function randomBookNote {
+    curl -k -s https://app.amosti.net/reading/api/notes/random | jq '(.note) + " - " + (.authors[0]) + ", " + (.title)'
+}
+
+function currentlyReading { 
+    curl -k -s https://app.amosti.net/reading/api/readinglist | jq '(.[].title) + " - " + (.[].authors[0])'
+}
+
+function lastRead { 
+    curl -k -s https://app.amosti.net/reading/api/donelist | jq '(.[0].title) + " - " + (.[0].authors[0])'
+}
+
+if [ -e /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
