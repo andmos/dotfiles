@@ -27,6 +27,7 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias stfu="osascript -e 'set volume output muted true'"
 alias removeOldMacportsPackages="sudo port uninstall inactive"
 alias repo=Repo
+alias pr=Pr
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -77,18 +78,35 @@ function unhide {
 }
 
 function Repo {
-    gitFolder="$(while [ ! -d ".git" -a / != "$PWD" ]; do cd .. ;done; [ / != "$PWD" ] && echo $PWD || echo '')"
+    gitFolder=$(_gitFolder)
     if [ -z "$gitFolder" ]
     then
         echo "This could not find git folder" && return
     fi
-    cd $gitFolder
-    git_url=`git config --get remote.origin.url`
-    git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
-    echo $git_url 
+    git_url=$(_gitUrl)
     url=${git_url%.git}
     open $url
-    cd -
+}
+function Pr {
+    gitFolder=$(_gitFolder)
+    if [ -z "$gitFolder" ]
+    then
+        echo "This could not find git folder" && return
+    fi
+    git_url= $(_gitUrl)
+    url=${git_url%.git}/pull/new/$(parse_git_branch | tr -d '()'| xargs)
+    echo $url
+    open $url
+}
+
+_gitFolder() {
+    while [ ! -d ".git" -a / != "$PWD" ]; do cd .. ;done; [ / != "$PWD" ] && echo $PWD || echo ''
+}
+
+_gitUrl() {
+    git_url=`git config --get remote.origin.url`
+    git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
+    echo $git_url
 }
 
 if [ -f /opt/local/etc/profile.d/bash_completion.sh ]; then
