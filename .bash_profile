@@ -78,23 +78,23 @@ function unhide {
 }
 
 function Repo {
-    gitFolder=$(_gitFolder)
+    local gitFolder=$(_gitFolder)
     if [ -z "$gitFolder" ]
     then
         echo "This could not find git folder" && return
     fi
-    git_url=$(_gitUrl)
-    url=${git_url%.git}
+    local git_url=$(_gitUrl)
+    local url=${git_url%.git}
     open $url
 }
 function Pr {
-    gitFolder=$(_gitFolder)
+    local gitFolder=$(_gitFolder)
     if [ -z "$gitFolder" ]
     then
         echo "This could not find git folder" && return
     fi
-    git_url= $(_gitUrl)
-    url=${git_url%.git}/pull/new/$(parse_git_branch | tr -d '()'| xargs)
+    local git_url=$(_gitUrl)
+    local url=${git_url%.git}/pull/new/$(parse_git_branch | tr -d '()'| xargs)
     echo $url
     open $url
 }
@@ -104,8 +104,8 @@ _gitFolder() {
 }
 
 _gitUrl() {
-    git_url=`git config --get remote.origin.url`
-    git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
+    local git_url=`git config --get remote.origin.url`
+    local git_url=$(sed 's/git@github.com:/https:\/\/github.com\//' <<< $git_url)
     echo $git_url
 }
 
