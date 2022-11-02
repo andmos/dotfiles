@@ -39,3 +39,8 @@ Install brews from `Brewfile`:
 
 (`brew bundle dump` to generate `Brewfile` on local computer)
 
+### Nix
+
+I also use `nix`, more info may or maynot come.
+
+
