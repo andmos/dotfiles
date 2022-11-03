@@ -1,5 +1,5 @@
 #! /bin/bash
-cp .bash_profile ~/.bash_profile; cp .vimrc ~/.vimrc ; cp .zshrc ~/.zshrc ; cp .plan ~/.plan ; source ~/.bash_profile
+cp .bash_profile ~/.bash_profile; cp .vimrc ~/.vimrc ; cp .zshrc ~/.zshrc ; cp .plan ~/.plan ; cp .gitconfig ~/.gitconfig ; source ~/.bash_profile
 if grep -q .bash_profile ~/.bashrc; then 
     exit 
 else 

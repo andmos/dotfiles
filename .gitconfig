@@ -1,0 +1,26 @@
+[color]
+	ui = true
+[core]
+	editor = vim
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Andreas Mosti
+	email = andreas.mosti@gmail.com
+	signingkey = A767097D4B109C60
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = master
+[commit]
+	gpgsign = true
+[gpg]
+    program = gpg
+[include]
+    path = ~/.gitconfig_local
+
