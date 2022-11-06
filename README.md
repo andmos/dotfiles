@@ -41,6 +41,6 @@ Install brews from `Brewfile`:
 
 ### Nix
 
-I also use `nix`, more info may or maynot come.
+I also use `nix`, more info may or may not come.
 
 
