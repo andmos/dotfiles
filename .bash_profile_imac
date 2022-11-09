@@ -7,11 +7,11 @@ function randomBookNote {
 }
 
 function currentlyReading { 
-    curl -k -s https://app.amosti.net/reading/api/readinglist | jq '(.[].title) + " - " + (.[].authors[0])'
+    curl -k -s https://app.amosti.net/reading/api/readinglist | jq '.[] | .title + " - " + .authors[0]'
 }
 
 function lastRead { 
-    curl -k -s https://app.amosti.net/reading/api/donelist | jq '(.[0].title) + " - " + (.[0].authors[0])'
+    curl -k -s https://app.amosti.net/reading/api/donelist | jq '.[0] | .title + " - " + .authors[0]'
 }
 
 if [ -e /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
