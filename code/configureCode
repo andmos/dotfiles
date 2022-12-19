@@ -2,8 +2,6 @@
 
 if [[ "$(uname)" == "Darwin" ]]; then 
     cp settings.json ~/Library/Application\ Support/Code/User/settings.json
-else 
-    if [[ "$(uname)" == "Linux" ]]; then
-        cp settings.json ~/.config/Code/User/settings.json
-    fi
+elif [[ "$(uname)" == "Linux" ]]; then
+    cp settings.json ~/.config/Code/User/settings.json
 fi 
