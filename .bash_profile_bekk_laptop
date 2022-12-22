@@ -39,3 +39,7 @@ function randomBookNote {
 
 export PATH="/usr/local/opt/node@12/bin:$PATH"
 if [ -e /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+export PATH=$PATH:/Users/andreasmosti/.dotnet/tools
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
