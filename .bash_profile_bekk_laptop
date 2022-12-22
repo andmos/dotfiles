@@ -32,9 +32,6 @@ jdks() {
     fi
 }
 
-# node version manager
-export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
 
 function randomBookNote {
     curl -s https://app.amosti.net/reading/api/notes/random | jq '(.note) + " - " + (.authors[]) + ", " + (.title)'
