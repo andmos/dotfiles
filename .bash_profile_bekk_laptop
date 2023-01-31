@@ -34,12 +34,18 @@ jdks() {
 
 
 function randomBookNote {
-    curl -s https://app.amosti.net/reading/api/notes/random | jq '(.note) + " - " + (.authors[]) + ", " + (.title)'
+    curl -s https://app.amosti.net/reading/api/notes/random | jq '(.note) + " - " + (.authors[0]) + ", " + (.title)'
 }
 
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-if [ -e /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/andreasmosti/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Nix
+if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
+    . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
+fi
+# End Nix
 
 export PATH=$PATH:/Users/andreasmosti/.dotnet/tools
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# To make sure nix is first on path
+export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
