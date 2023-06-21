@@ -152,19 +152,21 @@ fi
 
 # Functions and aliases not depending on OS
 
-# Load other .bash_profile_ files containing local functions or aliases
-for PROFILE in ~/.bash_profile_*; do
-    if [ -f $PROFILE ]; then
-            echo "Loading extra profile $PROFILE"
-            source $PROFILE 
-    fi
-done
-
 parse_git_branch() {
          git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
      }
-export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
+terraform_prompt()
+{
+    if [ -d .terraform ]; then
+        workspace="$(command terraform workspace show 2>/dev/null)"
+        if [ -n "$workspace" ]; then
+            echo " ($workspace)"
+        fi
+    fi
+}
+
+export PS1='\u@\h \[\033[32m\]\w\[\033[33m\]$(parse_git_branch)\[\e[1m\]$(terraform_prompt)\[\033[00m\] $ '
 export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts. 
 export PATH="~/Dev/context/tex/texmf-osx-64/bin:$PATH"
 export EDITOR=vim 
@@ -289,3 +291,12 @@ function calc() {
         fi
         printf "\n"
 }
+
+# Load other .bash_profile_ files containing local functions or aliases
+for PROFILE in ~/.bash_profile_*; do
+    if [ -f $PROFILE ]; then
+            echo "Loading extra profile $PROFILE"
+            source $PROFILE 
+    fi
+done
+
