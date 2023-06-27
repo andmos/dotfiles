@@ -169,7 +169,8 @@ terraform_prompt()
 export PS1='\u@\h \[\033[32m\]\w\[\033[33m\]$(parse_git_branch)\[\e[1m\]$(terraform_prompt)\[\033[00m\] $ '
 export PATH="~/Dropbox/Scripts:$PATH" # All my beatiful scripts. 
 export PATH="~/Dev/context/tex/texmf-osx-64/bin:$PATH"
-export EDITOR=vim 
+export EDITOR=vim
+export GPG_TTY=$(tty) # GPG Inappropriate ioctl for device fix
 
 alias dev='cd ~/Dev'
 alias pythonHttp='python -m SimpleHTTPServer 8000'
