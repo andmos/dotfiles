@@ -47,5 +47,14 @@ fi
 
 export PATH=$PATH:/Users/andreasmosti/.dotnet/tools
 
+# Volta to handle node versions
+export VOLTA_HOME=$HOME/.volta
+export PATH=$PATH:$VOLTA_HOME/bin
+
 # To make sure nix is first on path
 export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
+
+# direnv
+
+eval "$(direnv hook bash)"
+
