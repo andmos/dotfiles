@@ -224,6 +224,11 @@ function git-clean-local(){
     git fetch -p && for branch in $(git for-each-ref --format '%(refname) %(upstream:track)' refs/heads | awk '$2 == "[gone]" {sub("refs/heads/", "", $1); print $1}'); do git branch -D $branch; done
 }
 
+function git-show-last-commit(){
+    last_commit_hash=$(git rev-parse HEAD)
+    git show $last_commit_hash
+}
+
 function extract {
     if [ -f $1 ] ; then
       case $1 in
@@ -263,7 +268,7 @@ function findAndDelete {
 }
 
 function lb() {
-    vim ~/Notes/$(date '+%Y-%m-%d').md
+    vim ~/Notes/$(date '+%Y')/$(date '+%Y-%m-%d').md
 }
 
 function jsonToEnvironment {
