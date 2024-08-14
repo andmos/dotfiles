@@ -78,6 +78,9 @@ sudo spctl --master-disable
 # Don’t show recent applications in Dock
 defaults write com.apple.dock show-recents -bool false
 
+# Speed up show/hide speed for the dock
+defaults write com.apple.dock autohide-time-modifier -float 0.5
+
 killall Finder
 killall Dock
 echo "Setup completed. You should reboot now."
