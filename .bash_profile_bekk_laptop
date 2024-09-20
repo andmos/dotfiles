@@ -37,6 +37,11 @@ function randomBookNote {
     curl -s https://app.amosti.net/reading/api/notes/random | jq '(.note) + " - " + (.authors[0]) + ", " + (.title)'
 }
 
+d() { 
+    cd $(find ~/Dev -type d -maxdepth 1 | fzf) 
+}
+
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Nix
