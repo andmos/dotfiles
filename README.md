@@ -1,6 +1,7 @@
 Dotfiles
 ========
 ### Dotfiles
+
 I use .bash_profile on both Linux and OSX, a uname-check fixes the platformspesific values.
 To use .bash_profile on Linux, remember to add
 
@@ -43,4 +44,4 @@ Install brews from `Brewfile`:
 
 I also use `nix`, more info may or may not come.
 
-
+Oh, and sign your commits.
