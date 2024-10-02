@@ -42,6 +42,19 @@ d() {
 }
 
 
+tf-fmt() {
+    # Select a directory using fzf (default to the current directory if nothing selected)
+    DIR=$(find . -type d | fzf)
+
+    # Check if a directory was selected
+    if [[ -n "$DIR" ]]; then
+        # Recursively find and format all .tf files in the selected directory
+        find "$DIR" -type f -name "*.tf" -exec terraform fmt {} \;
+    else
+        echo "No directory selected."
+    fi
+}
+
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Nix
