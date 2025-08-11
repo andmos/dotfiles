@@ -209,6 +209,7 @@ alias docker-gc='docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v
 # git
 alias gs='git status'
 alias git-count-contributors='git shortlog -s -n'
+alias git-shortrev='git rev-parse --short=8 HEAD'
 
 function gclean 
 {
