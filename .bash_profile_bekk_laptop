@@ -63,6 +63,10 @@ if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 fi
 # End Nix
 
+# Kubernetes stuff
+mkdir -p $HOME/.kubectl-plugins
+export PATH="$HOME/.kubectl-plugins:$PATH"
+
 export PATH=$PATH:/Users/andreasmosti/.dotnet/tools
 
 # Volta to handle node versions
