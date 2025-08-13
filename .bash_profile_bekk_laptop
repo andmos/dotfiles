@@ -64,6 +64,7 @@ fi
 # End Nix
 
 # Kubernetes stuff
+alias k=kubectl
 mkdir -p $HOME/.kubectl-plugins
 export PATH="$HOME/.kubectl-plugins:$PATH"
 
