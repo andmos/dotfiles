@@ -307,3 +307,8 @@ for PROFILE in ~/.bash_profile_*; do
     fi
 done
 
+
+
+# Added by Toolbox App
+export PATH="$PATH:/Users/andreasmosti/Library/Application Support/JetBrains/Toolbox/scripts"
+

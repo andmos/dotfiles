@@ -68,6 +68,18 @@ alias k=kubectl
 mkdir -p $HOME/.kubectl-plugins
 export PATH="$HOME/.kubectl-plugins:$PATH"
 
+kctx() {
+    local context
+    context=$(kubectl config get-contexts -o name | fzf --height=40% --reverse --prompt="Select context: " --preview "kubectl config get-contexts {} | tail -n +2")
+    if [ -n "$context" ]; then
+        kubectl config use-context "$context"
+        echo "Switched to context: $context"
+    fi
+}
+
+alias argocd-forward='kubectl -n argocd port-forward svc/argocd-server 8000:80'
+
+
 export PATH=$PATH:/Users/andreasmosti/.dotnet/tools
 
 # Volta to handle node versions
@@ -76,6 +88,7 @@ export PATH=$PATH:$VOLTA_HOME/bin
 
 # To make sure nix is first on path
 export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 # direnv
 
