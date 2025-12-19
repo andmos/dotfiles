@@ -82,3 +82,6 @@ highlight SpellBad      ctermfg=Red         term=Reverse        guisp=Red       
 highlight SpellCap      ctermfg=Green       term=Reverse        guisp=Green     gui=undercurl   ctermbg=White 
 highlight SpellLocal    ctermfg=Cyan        term=Underline      guisp=Cyan      gui=undercurl   ctermbg=White 
 highlight SpellRare     ctermfg=Magenta     term=Underline      guisp=Magenta   gui=undercurl   ctermbg=White
+
+" Create directories when needed
+autocmd BufWritePre * silent! call mkdir(expand('%:p:h'), 'p')
