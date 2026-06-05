@@ -80,6 +80,12 @@ defaults write com.apple.dock show-recents -bool false
 
 # Speed up show/hide speed for the dock
 defaults write com.apple.dock autohide-time-modifier -float 0.5
+# Reduce Menu Bar padding
+defaults write -globalDomain NSStatusItemSelectionPadding -int 0
+defaults write -globalDomain NSStatusItemSpacing -int 0
+# revert it
+#defaults -currentHost delete -globalDomain NSStatusItemSelectionPadding
+#defaults -currentHost delete -globalDomain NSStatusItemSpacing
 
 killall Finder
 killall Dock
